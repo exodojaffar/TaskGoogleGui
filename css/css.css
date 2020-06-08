@@ -1,0 +1,67 @@
+body{
+	background-color: rgb(32, 176, 233);
+	font-family: Arial;
+	margin:0px;
+}
+
+header{
+	background-color: rgb(220,220,220);
+}
+
+hr{
+	color: grey;
+}
+
+.title{
+	font-size: 32px;
+	margin: 0px;
+	padding-left:  15px;
+}
+
+.tasklist {
+	width: 250px;
+	height: 500px;
+	margin: 0px 0px 0px 10px;
+	background-color: white;
+	
+	border-radius: 5px 5px 10px 10px;
+	box-shadow: 2px 2px 2px grey;
+}
+
+.tasktitle{
+	text-align: center;
+
+}
+
+.listname{
+	position: relative;
+	padding-top: 5px;
+	font-size: 20px;
+
+}
+
+div {
+	position: relative;
+}
+
+.plus{
+	font-family: Arial;
+	font-size: 28px;
+}
+.taskname{
+	margin: 15px;
+	font-size: 16px;
+	font-family: 'Merriweather', se rif;
+
+}
+#descricao {
+	display: show;
+	font-size: 12px;
+	margin-left: 25px;
+	margin-top: 0px;
+	padding-top: 2px;
+	box-shadow: -2px 3px 2px grey;
+	background-color: rgb(215,215,215);
+	height: 100px;
+}
+
