@@ -1,2 +1,2 @@
 # TaskGoogleGui
-Um GUI de tarefas para pc usando a API do Google Tasks e python tkinter.
+Um GUI de tarefas para web usando a API do Google Tasks e html, css e js puro.
