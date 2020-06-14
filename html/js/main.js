@@ -1,19 +1,22 @@
-function create(){
-	var tasklist = document.getElementsByTagName('section')
-	var task = document.createElement("div")
-	task.class = 'task';
-	task.appendChild(document.createElement('span'))
-	"<div class='task'><span class='taskname'>Nome Tarefa</span><p>Decrição</p></div>"
-	tasklist.appendChild(task)
+let taskname = document.getElementsByClassName('taskname');
+
+for (var tag of taskname) {
+	tag.addEventListener('click', 
+	function(evento){
+		var display = evento.target.parentElement.parentElement.getElementsByTagName('p')[0].hidden;
+
+		if (!display) {
+			display = true;
+
+		}else{
+			display = false
+		}
+		evento.target.parentElement.parentElement.getElementsByTagName('p')[0].hidden = display;
+	}
+	, false)
+
 }
 
-function EnterMouse(button){
-	button.style = 'color: blue;'
-}
-
-function LeaveMouse(button) {
-	button.style = 'color : black;'
-}
 
 function Espanda(button) {
 	// body...
