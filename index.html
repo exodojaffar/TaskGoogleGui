@@ -17,6 +17,7 @@
 		}
 		.tasklists {
 			display: inline-flex;
+			position: relative;
 		}
 		.title{
 		font-size: 32px;
@@ -37,16 +38,16 @@
 	</header>
 
 	<section class="tasklists">
-		<div class="tasklist">
+		<div class="tasklist" id='tasklist1'>
 
 			<div class="tasktitle">
 				Nome TaskList
 				<hr id="hr">
 			</div>
-
-			<div class="espasador"></div>
 			
-			<div class='task'>
+			<button class='add-buttton' onclick="addTask({'this':this, 'id':this.parentElement.id,'name':'Teste 01', 'des':'Top top top'})">Add Task</button>
+
+			<div class='task' draggable="true">
 				<div id='taskname'>
 					<span class="taskname">+ Nome Tarefa</span>
 				</div>
@@ -56,15 +57,15 @@
 
 		</div>
 
-		<div class="tasklist">
+		<div class="tasklist" id='tasklist2'>
 
 			<div class="tasktitle">
 				Nome TaskList
 				<hr id="hr">
 			</div>
-
-			<div class="espasador"></div>
 			
+			<button class="add-buttton" onclick="addTask({'this':this, 'id':this.parentElement.id,'name':'Teste 01', 'des':'Top top top'})">Add Task</button>
+
 			<div class='task'>
 				<div id='taskname'>
 					<span class="taskname">+ Nome Tarefa</span>
@@ -72,7 +73,9 @@
 
 				<p id="descricao">Decrição</p>
 			</div>
+			
 		</div>
+
 	</section>
 	<script type="text/javascript" src="./html/js/main.js"></script>
 </body>

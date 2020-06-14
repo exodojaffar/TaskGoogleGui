@@ -1,6 +1,6 @@
 .tasklist {
 	width: 250px;
-	height: 500px;
+	height: max-content;
 	margin-left: 15px;
 	background-color: white;
 	overflow-y: auto;
@@ -9,19 +9,22 @@
 	scroll-behavior: smooth;
 	display: flex;
 	flex-direction: column;
+	margin-top: 38px;
 }
 
 .tasktitle{
 	text-align: center;
 	font-size: 20px;
-	width: 250px;
 	position: absolute;
+	width: 250px;
 	border-radius: 5px 5px 10px 10px;
 	background-color: white;
+	top: 0;
 }
 
 .task{
 	transition: background-color 0.2s;
+	padding: 2px;
 }
 
 .task:hover {
