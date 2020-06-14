@@ -1,6 +1,6 @@
 .tasklist {
 	width: 250px;
-	height: max-content;
+	height: 500px;
 	margin-left: 15px;
 	background-color: white;
 	overflow-y: auto;
