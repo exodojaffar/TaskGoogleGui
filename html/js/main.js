@@ -1,15 +1,19 @@
 var taskname = document.getElementsByClassName('taskname');
 
 var altHidden = (evento) => {
-		var display = evento.target.parentElement.parentElement.getElementsByTagName('p')[0].hidden;
 
-		if (!display) {
-			display = true;
+		var hidden = evento.target.parentElement.parentElement.getElementsByTagName('p')[0].hidden;
 
+		if (hidden) {
+			hidden = false;
+			evento.target.classList.remove('icon-plus');
+			evento.target.classList.add('icon-minus');
 		}else{
-			display = false
+			hidden = true
+			evento.target.classList.remove('icon-minus');
+			evento.target.classList.add('icon-plus');
 		}
-		evento.target.parentElement.parentElement.getElementsByTagName('p')[0].hidden = display;
+		evento.target.parentElement.parentElement.getElementsByTagName('p')[0].hidden = hidden;
 	}
 
 function newElement(element, className, id) {
@@ -24,12 +28,12 @@ function addTask(info) {
 	var tasklist = document.getElementById(info.id);
 	var task  = newElement('div','task', '');
 	var taskname = newElement('div','', 'taskname')
-	var span = newElement('span','taskname','')
+	var span = newElement('span','taskname icon-minus','')
 	var p = newElement('p','', 'descricao')
 
 	task.draggable = true;
 	span.addEventListener('click', altHidden, false)
-	span.innerText = '+ ' + info.name;
+	span.innerText = info.name;
 	p.innerText = info.des;
 
 	taskname.appendChild(span)
