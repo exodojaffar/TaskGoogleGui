@@ -7,20 +7,29 @@
 	
 	<link rel="stylesheet" type="text/css" href="./html/css/css.css">
 	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap" rel="stylesheet"> 
-	<link href="http://mozilla.github.io/foundation-icons/assets/foundation-icons.css" type="text/css" rel="stylesheet"> 
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+	<link href="http://mozilla.github.io/foundation-icons/assets/foundation-icons.css" type="text/css" rel="stylesheet">
 	<style type="text/css">
 		body{
 			background-color: rgb(32, 176, 233);
 			font-family: Arial;
 			margin:0px;
+			overflow: hidden;
 		}
 		a:link ,a:visited{
 			color : black;
 			text-decoration: none
 		}
+		#content{
+			overflow-inline: auto;
+			min-width: 100%;
+		}
 		.tasklists {
 			display: inline-flex;
 			position: relative;
+			
+			width: auto;
+			
 		}
 		.title{
 		font-size: 32px;
@@ -32,6 +41,11 @@
 		#hr{
 			margin: 10px 0px 0px 0px;
 		}
+		.icon-trash-can::before {
+			position: absolute;
+			margin-left: 230px;
+			margin-top: 5px;
+		}
 	</style>
 </head>
 <body>
@@ -40,7 +54,9 @@
 		<hr style="color: grey;">
 	</header>
 
-	<section class="tasklists">
+	<div id='content'>
+	<section class="tasklists" id='section'>
+		
 		<div class="tasklist" id='tasklist1'>
 
 			<div class="tasktitle">
@@ -50,7 +66,8 @@
 			
 			<button class='add-buttton' onclick="addTask({'this':this, 'id':this.parentElement.id,'name':'Teste 01', 'des':'Top top top'})">Add Task</button>
 
-			<div class='task' draggable="true">
+			<div class='task' draggable="true" id="teste1">
+				<span class="icon-trash-can"></span>
 				<div id='taskname'>
 					<span class="taskname icon-minus">Nome Tarefa</span>
 				</div>
@@ -67,11 +84,12 @@
 				<hr id="hr">
 			</div>
 			
-			<button class="add-buttton" onclick="addTask({'this':this, 'id':this.parentElement.id,'name':'Teste 01', 'des':'Top top top'})">Add Task</button>
+			<button class="add-button" onclick="addTask({'this':this, 'id':this.parentElement.id,'name':'Teste 01', 'des':'Top top top'})">Add Task</button>
 
-			<div class='task'>
+			<div class='task' draggable="true" id='teste2'>
+				<span class="icon-trash-can"></span>
 				<div id='taskname'>
-					<span class="taskname icon-minus">Nome Tarefa</span>
+					<span class="taskname icon-minus">Nome Tarefa </span>
 				</div>
 
 				<p id="descricao">Decrição</p>
@@ -79,7 +97,12 @@
 			
 		</div>
 
+		<div id="addList" onclick="addList({'nameList':'Teste Lista','id':'temp' + numberIdList})">
+			<span class="icon-plus add"></span>
+		</div>
+
 	</section>
+	</div>
 	<script type="text/javascript" src="./html/js/main.js"></script>
 </body>
 </html>

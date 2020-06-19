@@ -1,3 +1,17 @@
+.tasklists{
+	position: relative;
+}
+.add {
+	text-align: center;
+	font-size: 20px;
+	position: absolute;
+	width: 250px;
+	border-radius: 5px 5px 10px 10px;
+	background-color: white;
+	top: 0;
+	margin-left: 15px;
+}
+
 .tasklist {
 	width: 250px;
 	height: 500px;
@@ -25,6 +39,7 @@
 .task{
 	transition: background-color 0.2s;
 	padding: 2px;
+	position: relative;
 }
 
 .task:hover {
@@ -45,15 +60,28 @@
 	font-family: 'Merriweather', se rif;
 	cursor: pointer;
   	transition: font-size 0.4s;
+
 }
 
 .taskname:hover{
 	color: blue;
 }
 
+.icon-trash-can:hover{
+	font-size: 18px;
+	color: red;
+	cursor: pointer;
+}
+
+.add:hover{
+	cursor: pointer;
+	box-shadow: 2px 2px 1px black;
+}
+
 #taskname{
 	padding-bottom: 10px;
 	padding-top: 1px;
+
 }
 
 #descricao {
