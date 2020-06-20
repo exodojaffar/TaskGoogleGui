@@ -5,7 +5,7 @@
 	text-align: center;
 	font-size: 20px;
 	position: absolute;
-	width: 250px;
+	width: 270px;
 	border-radius: 5px 5px 10px 10px;
 	background-color: white;
 	top: 0;
@@ -13,7 +13,7 @@
 }
 
 .tasklist {
-	width: 250px;
+	width: 270px;
 	height: 500px;
 	margin-left: 15px;
 	background-color: white;
@@ -25,13 +25,14 @@
 	display: flex;
 	flex-direction: column;
 	margin-top: 38px;
+	margin-bottom: 5px;
 }
 
 .tasktitle{
 	text-align: center;
 	font-size: 20px;
 	position: absolute;
-	width: 250px;
+	width: 270px;
 	border-radius: 5px 5px 10px 10px;
 	background-color: white;
 	top: 0;
