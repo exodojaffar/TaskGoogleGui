@@ -93,3 +93,28 @@
 	width: auto;
 	margin: 0px;
 }
+
+.about{
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+	height: 35px;
+	width: 300px;
+	background-color: #000000ad;
+	border-radius: 25px 0px 0px 0px;
+	}
+	
+.text-about{
+	font-family: Arial;
+	font-weight: bolder;
+	font-size: 18px;
+	color:white;
+	text-decoration: none;
+	margin-top: -10px;
+}
+#text-about{
+	justify-content: space-around;
+	display: flex;
+	white-space: pre-line;
+	margin-left: 15px;
+}
