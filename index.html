@@ -34,6 +34,7 @@
 		.title{
 		font-size: 32px;
 		margin: 0px;
+		text-align: center;
 		}
 		.espasador{
 			padding:17px;
@@ -52,6 +53,20 @@
 	<header style="background-color: rgb(220,220,220);">
 		<h2 class='title' >Tasks Google</h2>
 		<hr style="color: grey;">
+		<span class="icon-hamburger-menu" id="button-menu"></span>
+		
+		<div class="painel" id="menu" hidden="">
+
+			<button class="close-menu" type="button" onclick="altHidenMenu()"><span class="icon-close-x"></span></button>
+
+			<div id='sub-title'>Faça login com</div>
+
+			<div id='list'>
+				<div id="item">
+					
+				</div>
+			</div>
+		</div>
 	</header>
 
 	<div id='content'>

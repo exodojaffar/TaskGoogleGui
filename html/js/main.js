@@ -2,6 +2,18 @@ var taskname = document.getElementsByClassName('taskname');
 var numberIdTask = 01; // Id temporario, o id final sera o id da task do google
 var numberIdList = 01;
 
+var buttonMenu = document.querySelector('#button-menu')
+var menu = document.querySelector('#menu')
+
+function altHidenMenu() {
+	if (menu.hidden){
+		menu.classList.add('entering')
+	}
+	menu.hidden = !menu.hidden
+}
+
+
+
 var remove = (evento) => {
 	evento.target.parentElement.remove();
 }
@@ -11,15 +23,13 @@ var altHidden = (evento) => {
 		var hidden = evento.target.parentElement.parentElement.getElementsByTagName('p')[0].hidden;
 
 		if (hidden) {
-			hidden = false;
 			evento.target.classList.remove('icon-plus');
 			evento.target.classList.add('icon-minus');
 		}else{
-			hidden = true
 			evento.target.classList.remove('icon-minus');
 			evento.target.classList.add('icon-plus');
 		}
-		evento.target.parentElement.parentElement.getElementsByTagName('p')[0].hidden = hidden;
+		evento.target.parentElement.parentElement.getElementsByTagName('p')[0].hidden = !hidden;
 	}
 
 function addList(info){
@@ -82,4 +92,6 @@ for (var tag of taskname) {
 	, false)
 
 }
+
+buttonMenu.addEventListener('click', altHidenMenu, false)
 

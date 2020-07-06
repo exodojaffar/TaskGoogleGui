@@ -119,3 +119,78 @@
 	white-space: pre-line;
 	margin-left: 15px;
 }
+#button-menu{
+	font-size: 28px;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	cursor: pointer;
+
+}
+.painel{
+	position: fixed;
+	top: 1px;
+	left: 1px;
+	background-color: white;
+	height: 100%;
+	width: 200px;
+	border-radius: 4px;
+	box-shadow: 2px 3px 6px black;
+	transition: all 1s;
+}
+
+#sub-title{
+	text-align: center;
+	font-size: 18px;
+	border-bottom: 2px solid grey;
+	margin-bottom: 2px;
+}
+#list{
+
+}
+#item{
+	cursor: pointer;
+	margin-bottom: 1px;
+	margin-top: 1px;
+	width: 100%;
+	background-color: blue;
+	height: max-content;
+}
+
+
+.close-menu{
+	text-align: center;
+	font-size: 30px;
+	width: 100%;
+	margin-bottom: 5px;
+	border: none;
+	transition: background-color 0.2s;
+	cursor: pointer;
+}
+.close-menu:hover{
+	background-color: #80808054;
+}
+/*@keyframes hiden{
+	from{
+		display: block;
+		left: 0%;
+	}
+	to{
+		left: -100%;
+		display: none;
+	}
+}*/
+.entering{
+	animation-name: showen;
+	animation-duration: 0.8s;
+}
+
+@keyframes showen{
+	from{
+		left:-200px;
+	}
+	to{
+		left: 1px;
+	}
+}
+
