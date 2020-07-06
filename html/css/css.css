@@ -1,3 +1,41 @@
+body{
+			background-color: rgb(32, 176, 233);
+			font-family: Arial;
+			margin:0px;
+			overflow-x: hidden;
+		}
+		a:link ,a:visited{
+			color : black;
+			text-decoration: none
+		}
+		#content{
+			overflow-x: auto;
+			min-width: 100%;
+		}
+		.tasklists {
+			display: inline-flex;
+			position: relative;
+			min-height: 545px;
+			width: auto;
+			
+		}
+		.title{
+		font-size: 32px;
+		margin: 0px;
+		text-align: center;
+		}
+		.espasador{
+			padding:17px;
+		}
+		#hr{
+			margin: 10px 0px 0px 0px;
+		}
+		.icon-trash-can::before {
+			position: absolute;
+			margin-left: 230px;
+			margin-top: 5px;
+		}
+
 .tasklists{
 	position: relative;
 }
