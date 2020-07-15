@@ -172,7 +172,7 @@ a:link ,a:visited{
 	left: 1px;
 	background-color: white;
 	height: 100%;
-	width: 200px;
+	width: 240px;
 	border-radius: 4px;
 	box-shadow: 2px 3px 6px black;
 	transition: all 1s;
@@ -192,11 +192,18 @@ a:link ,a:visited{
 	cursor: pointer;
 	margin-bottom: 1px;
 	margin-top: 1px;
-	width: 100%;
-	background-color: blue;
+	width: 99%;
 	height: max-content;
+	font-size: 19px;
+	font-weight: bold;
+	vertical-align: middle;
+	padding-bottom: 3px;
+	padding-top: 3px;
+	transition: background-color 0.2s;
 }
-
+#item:hover{
+	background-color: #80808054;
+}
 
 .close-menu{
 	text-align: center;
