@@ -207,9 +207,6 @@ a:link ,a:visited{
 	border-bottom: 2px solid grey;
 	margin-bottom: 2px;
 }
-#list{
-
-}
 #item{
 	cursor: pointer;
 	margin-bottom: 1px;
