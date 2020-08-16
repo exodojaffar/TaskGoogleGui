@@ -32,17 +32,17 @@ var altHidden = (evento) => {
 		evento.target.parentElement.parentElement.getElementsByTagName('p')[0].hidden = !hidden;
 	}
 
-function addList(info){
+function addList({nameList, id}){
 	var target = document.getElementById('addList');
 	var section = document.getElementById('section')
 
-	var list = newElement('div', 'tasklist', info.id)
+	var list = newElement('div', 'tasklist', id)
 	var title = newElement('div', 'tasktitle')
 	var button = newElement('button', 'add-button', '')
 	
 	button.onclick = function () {addTask({'this':this, 'id':this.parentElement.id,'name':'Teste 01', 'des':'Top top top'})}
 	button.innerText = 'Add task'
-	title.innerText = info.nameList
+	title.innerText = nameList
 	title.appendChild(newElement('hr', '', 'hr'))
 	list.appendChild(title)
 	list.appendChild(button)
@@ -61,9 +61,9 @@ function newElement(element, className, id) {
 	return div
 }
 
-function addTask(info) {
-	var tasklist = document.getElementById(info.id);
-	var task  = newElement('div','task', numberIdTask);
+function addTask({id, name, idTask, des}) {
+	var tasklist = document.getElementById(id);
+	var task  = newElement('div','task', idTask);
 	var taskname = newElement('div','', 'taskname')
 	var spanDelete =  newElement('span', 'icon-trash-can')
 	var spanTaskname = newElement('span','taskname icon-plus','')
@@ -72,8 +72,8 @@ function addTask(info) {
 	task.draggable = true;
 	spanDelete.addEventListener('click', remove, false)
 	spanTaskname.addEventListener('click', altHidden, false)
-	spanTaskname.innerText = info.name;
-	p.innerText = info.des;
+	spanTaskname.innerText = name;
+	p.innerText = des;
 	p.hidden = true;
 
 	taskname.appendChild(spanTaskname)
