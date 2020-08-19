@@ -102,7 +102,7 @@ function initClient() {
 
 		},
 		function(error) {
-			console.log(JSON.stringify(error, null, 2));
+			//console.log(JSON.stringify(error, null, 2));
 		}
 	);
 }
@@ -117,8 +117,7 @@ function updateLogin(isSignedIn) {
 		
 		signoutButton.hidden =false
 		setExamplesHidden('none')
-		getTaskLists()
-		.then(insertTasklists)
+		getTaskLists().then(insertTasklists)
 
 	} else {
 		tasklists = []
